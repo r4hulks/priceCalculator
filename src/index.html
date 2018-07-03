@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Discount page</title>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <!-- <h1 class="display-3" id="base">
+  
+  </h1><br>
+  <label for="#days">no of days</label>
+  <select name="days" id="days">
+    <option value="0">1</option>
+    <option value="1">2</option>
+    <option value="2">3</option>
+    <option value="3">4</option>
+    <option value="4">5</option>
+    <option value="5">6</option>
+    <option value="6">7</option>
+    <option value="7">8</option>
+    <option value="8">9</option>
+    <option value="9">10</option>
+    <option value="10">11</option>
+    <option value="11">12</option>
+    <option value="12">13</option>
+    <option value="13">14</option>
+    <option value="14">15</option>
+  </select>
+
+  <br><br>
+  <div class="details" id="details"></div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+<script type="text/javascript">
+
+
+
+  $(document).ready(function(){
+var basePrice=40;
+function getDiscount(){
+  var days= $('#days').val();
+  
+  var startDiscount=2.5;
+  if(days<1){
+    $('#details').html("<h1>price was "+basePrice+" <br> Price now is "+basePrice );
+
+  }
+  else
+  if(days<10){
+    var increment = 0.9;
+    var discountApplied= startDiscount+(days*increment);
+var totalPrice=basePrice-(discountApplied*basePrice/100);
+$('#details').html("<h1>price was "+basePrice+" <br> Price now is "+totalPrice +"<br> discount applied is "+discountApplied +"<br>"+increment);
+
+  }else
+  if(days=>10){
+    var increment =0.7;
+    var discountApplied= startDiscount+(days*increment);
+var totalPrice=basePrice-(discountApplied*basePrice/100);
+$('#details').html("<h1>price was "+basePrice+" <br> Price now is "+totalPrice +"<br> discount applied is "+discountApplied+"<br>"+increment);
+
+  }
+
+
+}
+
+$("#days").change(function(){
+getDiscount();
+});
+});
+
+
+
+</script>-->
+
+
+  <div class="card bg-light
+                text-center card-form" style="max-width:500px">
+    <div class="card-body">
+      <h3>Webliquids Infotech</h3>
+      <p>Select the course to register.</p>
+      
+        <div class="form-group">
+          <label for="courses">Select Course</label>
+          <select name="courses" id="courses" class="form-control">
+            <option value="1">Web Design</option>
+            <option value="2">Web Development</option>
+            <option value="3">SEO</option>
+            <option value="4">Android Development</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="duration">Select Duration</label>
+          <select name="duration" id="duration" class="form-control">
+            <option value="1">15 Days</option>
+            <option value="2">1 Month</option>
+            <option value="3">1.5 Month</option>
+            <option value="4">2 Months</option>
+            <option value="5">3 Months</option>
+            <option value="6">4 Months</option>
+            <option value="7">5 Months</option>
+            <option value="8">6 Months</option>
+            <option value="9">1 Year</option>
+            <option value="10">1.5 Years</option>
+            <option value="11">2 Years</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="class">Select timing</label>
+          <select name="class" id="class" class="form-control">
+            <option value="0">1 hour</option>
+            <option value="3">3 hours</option>
+            <option value="6">6 hours</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="students">how many seats you wanna book?</label>
+          <select name="students" id="students" class="form-control">
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+          </select>
+        </div>
+        <center>
+          <h6> ₹
+            <strike>
+              <span id="price">base price</span>
+            </strike>
+          </h6>
+          <h4 class="text-success">25% Off on all courses.</h4>
+          <h2>₹
+            <span id="discountedPrice">discounted price</span>
+          </h2>
+          <input type="submit" class="btn btn-outline-dark btn-block" style="width: 150px" value="Pay Now" id="click">
+     
+      </center>
+    </div>
+  </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+<script>
+  var webDesig = 13000;
+  var webDevelopment = 15000;
+  var seo = 30000;
+  var androidDevelopment = 20000;
+  var discount =2.5;
+  var totalDiscount=25;
+
+function getPrice(){
+  var getCourse= $('#courses').val();
+  var getDuration = $('#duration').val();
+  var getTime= $('#class').val();
+  var getStudents= $('#students').val();
+  //using switch statement to determine which course
+switch (getCourse){
+case '1':
+if (getDuration<2){
+  //alert("working till here");
+var totalPrice = (webDesig + (getTime*webDesig/100))*getStudents;
+$('#price').html(totalPrice);
+//25% off price here
+var discountedPrice= totalPrice-(totalDiscount*totalPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<6){
+  var increment=2.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (webDesig + (getTime*webDesig/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<9){
+  var increment=1.8;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (webDesig + (getTime*webDesig/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+if (getDuration<12){
+  var increment=1.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (webDesig + (getTime*webDesig/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+
+break;
+
+case '2':
+if (getDuration<2){
+  //alert("working till here");
+var totalPrice = (webDevelopment + (getTime*webDevelopment/100))*getStudents;
+$('#price').html(totalPrice);
+//25% off price here
+var discountedPrice= totalPrice-(totalDiscount*totalPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<6){
+  var increment=2.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (webDevelopment + (getTime*webDevelopment/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<9){
+  var increment=1.8;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (webDevelopment + (getTime*webDevelopment/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+if (getDuration<12){
+  var increment=1.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (webDevelopment + (getTime*webDevelopment/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+
+break;
+case '3':
+if (getDuration<2){
+  //alert("working till here");
+var totalPrice = (seo + (getTime*seo/100))*getStudents;
+$('#price').html(totalPrice);
+//25% off price here
+var discountedPrice= totalPrice-(totalDiscount*totalPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<6){
+  var increment=2.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (seo + (getTime*seo/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<9){
+  var increment=1.8;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (seo + (getTime*seo/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+if (getDuration<12){
+  var increment=1.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (seo + (getTime*seo/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+
+break;
+case '4':
+if (getDuration<2){
+  //alert("working till here");
+var totalPrice = (androidDevelopment + (getTime*androidDevelopment/100))*getStudents;
+$('#price').html(totalPrice);
+//25% off price here
+var discountedPrice= totalPrice-(totalDiscount*totalPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<6){
+  var increment=2.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (androidDevelopment + (getTime*androidDevelopment/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+else
+if (getDuration<9){
+  var increment=1.8;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (androidDevelopment + (getTime*androidDevelopment/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+if (getDuration<12){
+  var increment=1.1;
+  var extraDiscount=getDuration*increment+discount;
+  console.log(increment + " for "+ extraDiscount);
+  var totalPrice = (androidDevelopment + (getTime*androidDevelopment/100));
+  var extraDiscountedPrice= (totalPrice-(extraDiscount*totalPrice/100))*getStudents;
+  $('#price').html(Math.round(extraDiscountedPrice));
+  //25% off price here
+var discountedPrice= extraDiscountedPrice-(totalDiscount*extraDiscountedPrice/100);
+$('#discountedPrice').html(Math.round(discountedPrice));
+}
+
+break;
+}  
+}
+
+
+//basic script to load function on page load and change
+$(document).ready(function(){
+  getPrice();
+$('select').change(function(){
+
+
+getPrice();
+});
+});
+
+
+
+
+
+
+
+</script>
+
+
+</html>
