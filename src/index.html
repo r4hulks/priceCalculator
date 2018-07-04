@@ -153,20 +153,28 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 <script>
+    //base discount
     var discount = 2.5;
+    //overall discount apllied on total cart value
     var totalDiscount = 25;
 
+//function to calculate price
     function getPrice() {
-
+//get the price of assignment
         var getCoursePrice = $('#courses Option:selected').attr("data-price");
+        //get the urgency of assignment
         var getDuration = $('#duration Option:selected').val();
+        //get the standard of assignment
         var getTime = $('#class Option:selected').val();
+        //get page value of assignment
         var getStudents = $('#students Option:selected').val();
 
-        //using switch statement to determine which course
+        //using switch statement to determine which course with price
         switch (getCoursePrice) {
             case '22.96':
+            //base price of course
                 var basePrice = 22.96;
+                //if statements to add additional discount depending on urgency
                 if (getDuration < 5) {
                     //alert("working till here");
                     var totalPrice = (basePrice + (getTime * basePrice / 100)) * getStudents;
@@ -222,7 +230,7 @@
                     $('#discountedPrice').html(discountedPrice.toFixed(2));
                 }
                 break;
-
+//second case statement
             case '38.54':
                 var basePrice = 38.54;
                 if (getDuration < 5) {
